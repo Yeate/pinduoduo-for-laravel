@@ -5,7 +5,7 @@
 ```shell
 $ composer require "composer require xidian/pinduoduo-sdk"
 ```
-然后添加服务： 修改 `config/app.php` 添加  `Xidian\Pinduoduo\PinduoduoServiceProvider::class`
+然后添加服务： 修改 `config/app.php` 添加`Xidian\Pinduoduo\PinduoduoServiceProvider::class`  
 别名的配置： `'Pinduoduo' => Xidian\Pinduoduo\Facades\Pinduoduo::class`
 
 执行
