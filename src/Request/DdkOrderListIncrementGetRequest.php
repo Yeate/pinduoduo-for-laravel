@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: david
  * Date: 2018/4/27
- * Time: 下午12:32
+ * Time: 下午4:16
  */
 
 namespace Xidian\Pinduoduo\Request;
@@ -11,21 +11,19 @@ namespace Xidian\Pinduoduo\Request;
 
 use Xidian\Pinduoduo\AbstractInterface\Request;
 
-class DdkOrderListRangeGetRequest extends Request
+class DdkOrderListIncrementGetRequest extends Request
 {
-    private $type = 'pdd.ddk.order.list.range.get';
+    private $type = 'pdd.ddk.order.list.increment.get';
 
-    private $startTime;
+    private $startUpdateTime;
 
-    private $endTime;
+    private $endUpdateTime;
 
     private $pid;
 
     private $pageSize;
 
     private $page;
-
-    private $timeType;
 
     public function setType($type)
     {
@@ -37,24 +35,24 @@ class DdkOrderListRangeGetRequest extends Request
         return $this->type;
     }
 
-    public function setStartTime($startTime)
+    public function setStartUpdateTime($startUpdateTime)
     {
-        $this->startTime = $startTime;
+        $this->startUpdateTime = $startUpdateTime;
     }
 
-    public function getStartTime()
+    public function getStartUpdateTime()
     {
-        return $this->startTime;
+        return $this->startUpdateTime;
     }
 
-    public function setEndTime($endTime)
+    public function setEndUpdateTime($endUpdateTime)
     {
-        $this->endTime = $endTime;
+        $this->endUpdateTime = $endUpdateTime;
     }
 
-    public function getEndTime()
+    public function getEndUpdateTime()
     {
-        return $this->endTime;
+        return $this->endUpdateTime;
     }
 
     public function setPid($pid)
@@ -87,26 +85,15 @@ class DdkOrderListRangeGetRequest extends Request
         return $this->page;
     }
 
-    public function setTimeType($timeType)
-    {
-        $this->timeType = $timeType;
-    }
-
-    public function getTimeType()
-    {
-        return $this->timeType;
-    }
-
     public function getParams()
     {
         $params = [
             'type' => $this->type,
-            'start_time' => $this->startTime,
-            'end_time' => $this->endTime,
+            'start_update_time' => $this->startUpdateTime,
+            'end_update_time' => $this->endUpdateTime,
             'p_id' => $this->pid,
             'page_size' => $this->pageSize,
-            'page' => $this->page,
-            'time_type' => $this->timeType
+            'page' => $this->page
         ];
         return array_filter($params);
     }
