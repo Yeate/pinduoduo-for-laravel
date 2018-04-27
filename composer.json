@@ -1,5 +1,5 @@
 {
-    "name": "xidian/pinduoduo_sdk",
+    "name": "xidian/pinduoduo-sdk",
     "type": "library",
     "require": {
         "php": ">=5.4.0",
