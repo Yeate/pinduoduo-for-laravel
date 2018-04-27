@@ -1,0 +1,10 @@
+{
+    "name": "xidian/pinduoduo",
+    "type": "library",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Xidian\\Pinduoduo\\": "src/"
+        }
+    }
+}
