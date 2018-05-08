@@ -1,5 +1,5 @@
 {
-    "name": "xidian/pinduoduo-sdk",
+    "name": "xidiankeji/pinduoduo-sdk",
     "type": "library",
     "require": {
         "php": ">=5.4.0",
@@ -7,7 +7,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Xidian\\Pinduoduo\\": "src/"
+            "XiDianKeJi\\Pinduoduo\\": "src/"
         }
     }
 }
