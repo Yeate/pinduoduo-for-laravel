@@ -6,7 +6,7 @@
  * Time: 下午6:30
  */
 
-namespace Xidian\Pinduoduo;
+namespace Xidiankeji\Pinduoduo;
 
 
 class Oauth

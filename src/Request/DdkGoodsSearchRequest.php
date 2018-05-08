@@ -6,10 +6,10 @@
  * Time: 上午10:23
  */
 
-namespace Xidian\Pinduoduo\Request;
+namespace Xidiankeji\Pinduoduo\Request;
 
 
-use Xidian\Pinduoduo\AbstractInterface\Request;
+use Xidiankeji\Pinduoduo\AbstractInterface\Request;
 
 class DdkGoodsSearchRequest extends Request
 {

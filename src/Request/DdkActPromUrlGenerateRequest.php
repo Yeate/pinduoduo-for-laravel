@@ -6,10 +6,10 @@
  * Time: 下午4:28
  */
 
-namespace Xidian\Pinduoduo\Request;
+namespace Xidiankeji\Pinduoduo\Request;
 
 
-use Xidian\Pinduoduo\AbstractInterface\Request;
+use Xidiankeji\Pinduoduo\AbstractInterface\Request;
 
 class DdkActPromUrlGenerateRequest extends Request
 {

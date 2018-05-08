@@ -6,7 +6,7 @@
  * Time: 下午2:42
  */
 
-namespace Xidian\Pinduoduo\Facades;
+namespace Xidiankeji\Pinduoduo\Facades;
 
 
 use Illuminate\Support\Facades\Facade;

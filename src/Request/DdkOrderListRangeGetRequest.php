@@ -6,10 +6,10 @@
  * Time: 下午12:32
  */
 
-namespace Xidian\Pinduoduo\Request;
+namespace Xidiankeji\Pinduoduo\Request;
 
 
-use Xidian\Pinduoduo\AbstractInterface\Request;
+use Xidiankeji\Pinduoduo\AbstractInterface\Request;
 
 class DdkOrderListRangeGetRequest extends Request
 {

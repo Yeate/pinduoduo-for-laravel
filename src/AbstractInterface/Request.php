@@ -6,7 +6,7 @@
  * Time: 下午3:40
  */
 
-namespace Xidian\Pinduoduo\AbstractInterface;
+namespace Xidiankeji\Pinduoduo\AbstractInterface;
 
 
 class Request

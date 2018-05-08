@@ -1,6 +1,6 @@
 <?php
 
-namespace Xidian\Pinduoduo;
+namespace Xidiankeji\Pinduoduo;
 
 use Illuminate\Support\ServiceProvider;
 

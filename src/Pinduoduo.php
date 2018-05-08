@@ -6,7 +6,7 @@
  * Time: 下午2:40
  */
 
-namespace Xidian\Pinduoduo;
+namespace Xidiankeji\Pinduoduo;
 
 
 class Pinduoduo
