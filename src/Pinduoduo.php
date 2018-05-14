@@ -98,11 +98,11 @@ class Pinduoduo
      * @param $request
      * @return mixed
      */
-    public function excute($request)
+    public function excute($request,$access_token='')
     {
         $baseParams = [
             'client_id' => $this->clientId,
-            'access_token' => '',
+            'access_token' => $access_token,
             'data_type' => $this->format,
             'timestamp' => time(),
             'version' => '',
