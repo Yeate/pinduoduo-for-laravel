@@ -21,6 +21,8 @@ class DdkOauthGoodsPromUrlGenerateRequest extends Request
 
     private $multiGroup;
 
+    private $generateWeApp='true';
+
     public function setType($type)
     {
         $this->type = $type;
@@ -71,6 +73,16 @@ class DdkOauthGoodsPromUrlGenerateRequest extends Request
         return $this->multiGroup;
     }
 
+    public function setGenerateWeApp($generateWeApp)
+    {
+        $this->generateWeApp = $generateWeApp;
+    }
+
+    public function getGenerateWeApp()
+    {
+        return $this->generateWeApp;
+    }
+
     public function getParams()
     {
         $params = [
@@ -78,7 +90,8 @@ class DdkOauthGoodsPromUrlGenerateRequest extends Request
             'p_id' => $this->pid,
             'goods_id_list' => $this->goodsIdList,
             'generate_short_url' => $this->generateShortUrl,
-            'multi_group' => $this->multiGroup
+            'multi_group' => $this->multiGroup,
+            'generate_we_app'=>$this->generateWeApp
         ];
 
         return array_filter($params);
