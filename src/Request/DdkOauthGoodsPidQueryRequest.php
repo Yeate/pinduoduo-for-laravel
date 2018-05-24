@@ -53,7 +53,7 @@ class DdkOauthGoodsPidQueryRequest extends Request
     {
         $params = [
             'type' => $this->type,
-            'pageSize' => $this->pageSize,
+            'page_size' => $this->pageSize,
             'page' => $this->page,
         ];
         return array_filter($params);
