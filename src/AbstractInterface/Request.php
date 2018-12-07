@@ -30,9 +30,9 @@ class Request
         $action = '';
         $param = lcfirst(preg_replace_callback('/get|set/',function($match)use(&$action){
             $action = $match;
-        },'getCustomParameters'));
+        },$function_name));
         if(count($action)==1){
-            switch ($action) {
+            switch ($action['0']) {
                 case 'get':
                     if(isset($this->$param)){
                         return $this->$param;
@@ -40,7 +40,8 @@ class Request
                     break;
                 case 'set':
                     if(isset($this->$param) && isset($arguments['0'])){
-                        $this->$param=$arguments['0'];
+                        $param = str_replace("'",'"',$arguments['0']);
+                        return $this->$param=$param;
                     }
                     break;
             }

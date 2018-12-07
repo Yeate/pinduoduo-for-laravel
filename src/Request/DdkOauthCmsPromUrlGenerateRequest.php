@@ -14,14 +14,14 @@ use Xidiankeji\Pinduoduo\AbstractInterface\Request;
 class DdkOauthCmsPromUrlGenerateRequest extends Request
 {
     private $type = 'pdd.ddk.oauth.cms.prom.url.generate';
-
+    
     protected $multiGroup = false;          //单人团多人团标志。true-多人团，false-单人团 默认false
     
     protected $generateShortUrl = false;    //是否生成短链接。true-是，false-否，默认false
     
     protected $generateMobile = false;      //是否生成手机跳转链接。true-是，false-否，默认false
     
-    protected $pIdList;             //推广位列表，例如：["60005_612"]
+    protected $pidList;             //推广位列表，例如：["60005_612"]
     
     protected $customParameters;    //自定义参数，为链接打上自定义标签。自定义参数最长限制64个字节
     
@@ -36,8 +36,9 @@ class DdkOauthCmsPromUrlGenerateRequest extends Request
     public function getParams()
     {
         $params = [
+            'type' => $this->type,
             'generate_short_url' => $this->generateShortUrl,
-            'p_id_list' => $this->pIdList,
+            'p_id_list' => $this->pidList,
             'generate_mobile' => $this->generateMobile,
             'multi_group' => $this->multiGroup,
             'custom_parameters' => $this->customParameters,
