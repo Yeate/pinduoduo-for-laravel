@@ -15,6 +15,7 @@ $ php artisan vendor:publish
 选择Provider: `Xidiankeji\Pinduoduo\PinduoduoServiceProvider`选项  
 config目录下会生成 `pinduouo.php` 文件 修改配置文件即可
 
+支持CMS商城链接生成
 ## USE
 
 ```php
