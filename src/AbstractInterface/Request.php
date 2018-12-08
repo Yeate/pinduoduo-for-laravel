@@ -39,9 +39,21 @@ class Request
                     }
                     break;
                 case 'set':
-                    if(isset($this->$param) && isset($arguments['0'])){
-                        $param = str_replace("'",'"',$arguments['0']);
-                        return $this->$param=$param;
+                    if(isset($arguments['0'])){
+                        if(is_string($arguments['0'])){
+                            $arguments = str_replace("'",'"',$arguments['0']);
+                        }elseif(is_bool($arguments['0'])){
+                            if($arguments['0']){
+                                $arguments='true';
+                            }else{
+                                $arguments='false';
+                            }
+                        }
+                        try{
+                            return $this->$param=$arguments;
+                        }catch (\Exception $e){
+                            throw new \Exception($param." param can't find");
+                        }
                     }
                     break;
             }
