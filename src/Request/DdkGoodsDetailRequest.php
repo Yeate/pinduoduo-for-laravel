@@ -15,19 +15,9 @@ class DdkGoodsDetailRequest extends Request
 {
     private $type = 'pdd.ddk.goods.detail';
 
-    private $goodsIdList;
+    protected $goodsIdList;
 
-    /**
-     * 设置类型
-     * @Author: david
-     * @Date: 2018/4/26
-     * @param $type
-     *
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-    }
+    
 
     /**
      * 设置商品ID
@@ -41,11 +31,6 @@ class DdkGoodsDetailRequest extends Request
         $this->goodsIdList = $goodsIdList;
     }
 
-
-    public function getType()
-    {
-        return $this->type;
-    }
 
     public function getGoodsIdList()
     {
