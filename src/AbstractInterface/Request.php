@@ -42,6 +42,8 @@ class Request
                     if(isset($arguments['0'])){
                         if(is_string($arguments['0'])){
                             $arguments = str_replace("'",'"',$arguments['0']);
+                        }elseif(is_numeric($arguments['0'])){
+                            $arguments = $arguments['0'];
                         }elseif(is_bool($arguments['0'])){
                             if($arguments['0']){
                                 $arguments='true';
