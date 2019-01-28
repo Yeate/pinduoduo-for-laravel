@@ -28,7 +28,9 @@ class DdkGoodsSearchRequest extends Request
     private $withCoupon;
 
     private $rangeList;
-
+    
+    private $pid;
+    
     public function setType($type)
     {
         $this->type = $type;
@@ -108,7 +110,11 @@ class DdkGoodsSearchRequest extends Request
     {
         return $this->rangeList;
     }
-
+    
+    public function setPid()
+    {
+        return $this->pid;
+    }
     public function getParams()
     {
         $params = [
@@ -119,7 +125,8 @@ class DdkGoodsSearchRequest extends Request
             'page_size' => $this->pageSize,
             'sort_type' => $this->sortType,
             'with_coupon' => $this->withCoupon,
-            'range_list' => $this->rangeList
+            'range_list' => $this->rangeList,
+            'pid'=>$this->pid
         ];
 
         return array_filter($params);
