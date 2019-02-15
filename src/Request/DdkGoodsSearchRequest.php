@@ -35,6 +35,8 @@ class DdkGoodsSearchRequest extends Request
 
     private $zsDuoId;
 
+    private $pid;
+    
     public function setType($type)
     {
         $this->type = $type;
@@ -138,6 +140,11 @@ class DdkGoodsSearchRequest extends Request
     public function getZsDuoId(){
         return $this->zsDuoId;
     }
+  
+    public function setPid()
+    {
+        return $this->pid;
+    }
 
     public function getParams()
     {
@@ -153,6 +160,7 @@ class DdkGoodsSearchRequest extends Request
             'opt_id' => $this->optId,
             'goods_id_list' => $this->goodsIds,
             'zs_duo_id' => $this->zsDuoId,
+            'pid'=>$this->pid
         ];
 
         return array_filter($params);
