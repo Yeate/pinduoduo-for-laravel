@@ -29,6 +29,12 @@ class DdkGoodsSearchRequest extends Request
 
     private $rangeList;
 
+    private $optId;
+
+    private $goodsIds;
+
+    private $zsDuoId;
+
     public function setType($type)
     {
         $this->type = $type;
@@ -109,17 +115,44 @@ class DdkGoodsSearchRequest extends Request
         return $this->rangeList;
     }
 
+    public function setOptId($optId){
+        $this->optId = $optId;
+    }
+
+    public function getOptId(){
+        return $this->optId;
+    }
+
+    public function setGoodsIds($goodsIds){
+        $this->goodsIds = '['.implode(',', $goodsIds).']';
+    }
+
+    public function getGoodsIds(){
+        return $this->goodsIds;
+    }
+
+    public function setZsDuoId($zsDuoId){
+        $this->zsDuoId = $zsDuoId;
+    }
+
+    public function getZsDuoId(){
+        return $this->zsDuoId;
+    }
+
     public function getParams()
     {
         $params = [
             'type' => $this->type,
             'keyword' => $this->keyword,
-            'category_id' => $this->categoryId,
+            'cat_id' => $this->categoryId,
             'page' => $this->page,
             'page_size' => $this->pageSize,
             'sort_type' => $this->sortType,
             'with_coupon' => $this->withCoupon,
-            'range_list' => $this->rangeList
+            'range_list' => $this->rangeList,
+            'opt_id' => $this->optId,
+            'goods_id_list' => $this->goodsIds,
+            'zs_duo_id' => $this->zsDuoId,
         ];
 
         return array_filter($params);
