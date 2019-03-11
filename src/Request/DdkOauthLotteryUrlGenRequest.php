@@ -12,7 +12,7 @@ class DdkOauthLotteryUrlGenRequest extends Request
 {
     private $type = 'pdd.ddk.oauth.lottery.url.gen';
     
-    protected $pid;
+    protected $pidList;
     
     protected $generateWeappWebview;
     
@@ -25,7 +25,7 @@ class DdkOauthLotteryUrlGenRequest extends Request
     {
         $params = [
             'type' => $this->type,
-            'pid_list' => '["'.$this->pid.'"]',
+            'pid_list' => '["'.$this->pidList.'"]',
             'generate_weapp_webview' => $this->generateWeappWebview,
             'multi_group'=>$this->multiGroup,
             'custom_parameters'=>$this->customParameters
