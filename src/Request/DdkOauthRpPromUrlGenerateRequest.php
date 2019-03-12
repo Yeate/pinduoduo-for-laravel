@@ -13,13 +13,12 @@ class DdkOauthRpPromUrlGenerateRequest extends Request
     private $type = 'pdd.ddk.oauth.rp.prom.url.generate';
 
 
-    protected $pIdList;
+    protected $pidList;
     
     protected $customParameters;
     
-    protected $generateShortUrl;
+    protected $generateShortUrl='true';
     
-    protected $multiGroup;
     
     protected $generateWeApp='true';
     
@@ -36,7 +35,7 @@ class DdkOauthRpPromUrlGenerateRequest extends Request
     {
         $params = [
             'type' => $this->type,
-            'p_id_list' => $this->pIdList,
+            'p_id_list' => '["'.$this->pidList.'"]',
             'custom_parameters' => $this->customParameters,
             'generate_short_url' => $this->generateShortUrl,
             'we_app_web_wiew_url' => $this->weAppWebWiewUrl,
@@ -44,7 +43,6 @@ class DdkOauthRpPromUrlGenerateRequest extends Request
             'generate_weapp_webview' => $this->generateWeappWebview,
             'generate_we_app'=>$this->generateWeApp
         ];
-
         return array_filter($params);
     }
 }
